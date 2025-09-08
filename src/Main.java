@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -7,19 +9,37 @@ public class Main {
         simple[0] = 1;
         simple[1] = 2;
         simple[2] = 3;
-        System.out.println(simple[0] + ", " + simple[1] + ", " + simple[2]);
+        System.out.println(Arrays.toString(simple));
 
         double[] fractional = {1.57, 7.654, 9.986};
-        System.out.println(fractional[0] + ", " + fractional[1] + ", " + fractional[2]);
+        System.out.println(Arrays.toString(fractional));
 
-        int[] arbitrary = new int[]{64, 128, 256, 512};
-        System.out.println(arbitrary[0] + ", " + arbitrary[1] + ", " + arbitrary[2] + ", " + arbitrary[3]);
+        int[] arbitrary = new int[]{2, 4, 8, 16, 32, 64, 128, 256, 512};
+        System.out.println(Arrays.toString(arbitrary));
 
         System.out.println("Задание 3");
-        System.out.println(simple[2] + ", " + simple[1] + ", " + simple[0]);
-        System.out.println(fractional[2] + ", " + fractional[1] + ", " + fractional[0]);
-        System.out.println(arbitrary[3] + ", " + arbitrary[2] + ", " + arbitrary[1] + ", " + arbitrary[0]);
+        for (int b = simple.length - 1; b >= 0; b--) {
+            System.out.print(simple[b]);
+            if (b > 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+        for (int c = fractional.length - 1; c >= 0; c--) {
+            System.out.print(fractional[c]);
+            if (c > 0) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+        for (int d = arbitrary.length - 1; d >= 0; d--) {
+            System.out.print(arbitrary[d]);
+            if (d > 0) {
+                System.out.print(", ");
+            }
+        }
 
+        System.out.println();
         System.out.println("Задание 4");
         int[] simpleTwo = {1, 2, 3};
         for (int a = 0; a < simpleTwo.length; a++) {
